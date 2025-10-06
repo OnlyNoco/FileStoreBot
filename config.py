@@ -31,7 +31,7 @@ DB_CHANNEL = -1002689479503   # just put channel id dont add ""
 #     "-1001234567890": {"name": "Secondary DB", "is_primary": False, "is_active": True}
 # }
 # Auto Delete Timer (seconds)
-AUTO_DEL = 300
+AUTO_DEL = 1800
 # Admin IDs
 ADMINS = [5296584067]
 # Bot Settings
@@ -40,11 +40,11 @@ PROTECT = True
 
 # Messages Configuration
 MESSAGES = {
-    "START": "<b>›› ʜᴇʏ!!, {first} ~ <blockquote>ʟᴏᴠᴇ ᴘᴏʀɴʜᴡᴀ? ɪ ᴀᴍ ᴍᴀᴅᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ ғɪɴᴅ ᴡʜᴀᴛ ʏᴏᴜ aʀᴇ ʟᴏᴏᴋɪɴɢ ꜰᴏʀ.</blockquote></b>",
-    "FSUB": "<b><blockquote>›› ʜᴇʏ ×</blockquote>\n  ʏᴏᴜʀ ғɪʟᴇ ɪs ʀᴇᴀᴅʏ ‼️ ʟᴏᴏᴋs ʟɪᴋᴇ ʏᴏᴜ ʜᴀᴠᴇɴ'ᴛ sᴜʙsᴄʀɪʙᴇᴅ ᴛᴏ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ʏᴇᴛ, sᴜʙsᴄʀɪʙᴇ ɴᴏᴡ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇs</b>",
-    "ABOUT": "<b>›› ғᴏʀ ᴍᴏʀᴇ: \n <blockquote expandable>›› ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ: <a href='https://t.me/codeflix_bots'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> \n›› ᴏᴡɴᴇʀ: @ProYato\n›› ʟᴀɴɢᴜᴀɢᴇ: <a href='https://docs.python.org/3/'>Pʏᴛʜᴏɴ 3</a> \n›› ʟɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ ᴠ2</a> \n›› ᴅᴀᴛᴀʙᴀsᴇ: <a href='https://www.mongodb.com/docs/'>Mᴏɴɢᴏ ᴅʙ</a> \n›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @cosmic_freak</b></blockquote>",
-    "REPLY": "<b>For More Join - @Hanime_Arena</b>",
-    "SHORT_MSG": "<b>📊 ʜᴇʏ {first}, \n\n‼️ ɢᴇᴛ ᴀʟʟ ꜰɪʟᴇꜱ ɪɴ ᴀ ꜱɪɴɢʟᴇ ʟɪɴᴋ ‼️\n\n ⌯ ʏᴏᴜʀ ʟɪɴᴋ ɪꜱ ʀᴇᴀᴅʏ, ᴋɪɴᴅʟʏ ᴄʟɪᴄᴋ ᴏɴ ᴏᴘᴇɴ ʟɪɴᴋ ʙᴜᴛᴛᴏɴ..</b>",
+    "START": "<b>›› ʜᴇʏ {first} ~<blockquote>ɪ'ᴍ ʏᴀᴛᴏ, ᴏᴡɴᴇᴅ ʙʏ <a href='https://t.me/OnlyNoco'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>. ɪ ʜᴇʟᴘ ʏᴏᴜ ꜰɪɴᴅ ᴀɴɪᴍᴇ & ʜᴇɴᴛᴀɪ ᴄᴏɴᴛᴇɴᴛ ꜰᴀsᴛ ᴀɴᴅ ᴇᴀsɪʟʏ.</blockquote></b>",
+    "FSUB": "<b><blockquote>›› ʜᴇʏ ×</blockquote>ʏᴏᴜʀ ꜰɪʟᴇ ɪs ʀᴇᴀᴅʏ, ʙᴜᴛ ʏᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴊᴏɪɴᴇᴅ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ʏᴇᴛ. ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ᴜsɪʙɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴs ᴛᴏ ɢᴇᴛ ғɪʟᴇ ᴀᴄᴄᴇss.</b>",
+    "ABOUT": "<b>›› ᴀʙᴏᴜᴛ ᴍᴇ:<blockquote expandable>◧ ᴏᴡɴᴇʀ: <a href='https://t.me/OnlyNoco'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>\n◧ ᴏᴜʀ sᴇʀᴠɪᴄᴇs ~\n⊡ <a href='https://t.me/HeavenlySubs'>ʙᴀᴛᴛʟᴇ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ʜᴇᴀᴠᴇɴs</a>\n⊡ <a href='https://t.me/FinishedAnimeCrisp'>ꜰɪɴɪsʜᴇᴅ ᴀɴɪᴍᴇ</a>\n⊡ <a href='https://t.me/OngoingAnimeCrisp'>ᴏɴɢᴏɪɴɢ ᴀɴɪᴍᴇ</a>\n⊡ <a href='https://t.me/CrispIndex'>ᴀɴɪᴍᴇ ɪɴᴅᴇx</a>\n⊡ <a href='https://t.me/+O7PeEMZOAoMzYzVl'>ʜᴇɴᴛᴀɪ ᴄʀɪsᴘ</a>\n⊡ <a href='https://t.me/DisscusionAnimeCrisp'>ᴅɪsᴄᴜssɪᴏɴ ɢʀᴏᴜᴘ</a>\n\n♧ ᴊᴏɪɴ ᴜs ꜰᴏʀ ᴏʀɢᴀɴɪᴢᴇᴅ ᴍᴜʟᴛɪ ǫᴜᴀʟɪᴛʏ ᴀɴɪᴍᴇ ᴄᴏɴᴛᴇɴᴛ ♧</blockquote></b>",
+    "REPLY": "<b>›› ᴊᴏɪɴ ᴜs ꜰᴏʀ ᴍᴏʀᴇ - <a href='https://t.me/FinishedAnimeCrisp'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠɪsɪᴛ</a></b>",
+    "SHORT_MSG": "<b>📊 ʜᴇʏ {first},\n\n‼️ ɢᴇᴛ ᴀʟʟ ꜰɪʟᴇs ɪɴ ᴀ sɪɴɢʟᴇ ʟɪɴᴋ ‼️\n\n⌯ ʏᴏᴜʀ ʟɪɴᴋ ɪs ʀᴇᴀᴅʏ — ᴛᴀᴘ ᴏɴ ‘ᴏᴘᴇɴ ʟɪɴᴋ’ ᴛᴏ ᴠɪᴇᴡ.</b>",
     "START_PHOTO": "https://graph.org/file/510affa3d4b6c911c12e3.jpg",
     "FSUB_PHOTO": "https://telegra.ph/file/7a16ef7abae23bd238c82-b8fbdcb05422d71974.jpg",
     "SHORT_PIC": "https://telegra.ph/file/7a16ef7abae23bd238c82-b8fbdcb05422d71974.jpg",
