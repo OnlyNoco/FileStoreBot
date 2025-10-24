@@ -16,7 +16,8 @@ SHORT_TUT = "https://t.me/How_to_Download_7x/26"
 
 # Bot Configuration
 SESSION = "onlynoco"
-TOKEN = "7775826639:AAFd-blgaumBUyZsnRB0MwHjvPWEQrYfGb8"
+BOT_TOKEN = "7775826639:AAFd-blgaumBUyZsnRB0MwHjvPWEQrYfGb8"
+TOKEN = BOT_TOKEN
 API_ID = "26254064"
 API_HASH = "72541d6610ae7730e6135af9423b319c"
 WORKERS = 5
