@@ -17,26 +17,15 @@ async def settings(client, query):
     total_db_channels = len(getattr(client, 'db_channels', {}))
     primary_db = getattr(client, 'primary_db_channel', client.db)
     
-    msg = f"""<blockquote>✦ sᴇᴛᴛɪɴɢs ᴏғ @{client.username}</blockquote>
-›› **ꜰꜱᴜʙ ᴄʜᴀɴɴᴇʟs:** `{total_fsub}` (ʀᴇѦᴜᴇsᴛ: {request_enabled}, ᴛɪᴍᴇʀ: {timer_enabled})
-›› **ᴅʙ ᴄʜᴀɴɴᴇʟs:** `{total_db_channels}` (ᴘʀɪᴍᴀʀʏ: `{primary_db}`)
-›› **ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴛɪᴍᴇʀ:** `{client.auto_del}`
-›› **ᴘʀᴏᴛᴇᴄᴛ ᴄᴏɴᴛᴇɴᴛ:** `{"✓ ᴛʀᴜᴇ" if client.protect else "✗ ꜰᴀʟsᴇ"}`
-›› **ᴅɪsᴀʙʟᴇ ʙᴜᴛᴛᴏɴ:** `{"✓ ᴛʀᴜᴇ" if client.disable_btn else "✗ ꜰᴀʟsᴇ"}`
-›› **ʀᴇᴘʟʏ ᴛᴇxᴛ:** `{client.reply_text if client.reply_text else 'ɴᴏɴᴇ'}`
-›› **ᴀᴅᴍɪɴs:** `{len(client.admins)}`
-›› **sʜᴏʀᴛɴᴇʀ ᴜʀʟ:** `{getattr(client, 'short_url', 'ɴᴏᴛ sᴇᴛ')}`
-›› **ᴛᴜᴛᴏʀɪᴀʟ ʟɪɴᴋ:** `{getattr(client, 'tutorial_link', 'ɴᴏᴛ sᴇᴛ')}`
-›› **sᴛᴀʀᴛ ᴍᴇssᴀɢᴇ:**
-<pre>{client.messages.get('START', 'ᴇᴍᴘᴛʏ')}</pre>
-›› **sᴛᴀʀᴛ ɪᴍᴀɢᴇ:** `{bool(client.messages.get('START_PHOTO', ''))}`
-›› **ꜰᴏʀᴄᴇ sᴜʙ ᴍᴇssᴀɢᴇ:**
-<pre>{client.messages.get('FSUB', 'ᴇᴍᴘᴛʏ')}</pre>
-›› **ꜰᴏʀᴄᴇ sᴜʙ ɪᴍᴀɢᴇ:** `{bool(client.messages.get('FSUB_PHOTO', ''))}`
-›› **ᴀʙᴏᴜᴛ ᴍᴇssᴀɢᴇ:**
-<pre>{client.messages.get('ABOUT', 'ᴇᴍᴘᴛʏ')}</pre>
-›› **ʀᴇᴘʟʏ ᴍᴇssᴀɢᴇ:**
-<pre>{client.reply_text}</pre>
+    msg = f"""<b>»  Cᴏɴғɪɢᴜʀᴀᴛɪᴏɴs</b>
+» **ᴛᴏᴛᴀʟ ғᴏʀᴄᴇ sᴜʙ ᴄʜᴀɴɴᴇʟ:**  `{total_fsub}`
+» **ᴛᴏᴛᴀʟ ᴀᴅᴍɪɴs:  **  `{len(client.admins)}`
+» **ᴅʙ ᴄʜᴀɴɴᴇʟs:  **  `{total_db_channels}`
+» **ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴍᴏᴅᴇ:  ** `{"Eɴᴀʙʟᴇᴅ" if client.auto_del != 0 else "Dɪsᴀʙʟᴇᴅ"}`
+» **ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴛɪᴍᴇʀ:**  `{client.auto_del}`
+» **ᴘʀᴏᴛᴇᴄᴛ ᴄᴏɴᴛᴇɴᴛ:**  `{"Eɴᴀʙʟᴇᴅ" if client.protect else "Dɪsᴀʙʟᴇᴅ"}`
+» **ᴄʜᴀɴɴᴇʟ ʙᴜᴛᴛᴏɴ:**  `{"Eɴᴀʙʟᴇᴅ" if client.disable_btn else "Dɪsᴀʙʟᴇᴅ"}`
+#» **ʀᴇǫᴜᴇsᴛ ғsᴜʙ ᴍᴏᴅᴇ:** `{client.reply_text if client.reply_text else 'ɴᴏɴᴇ'}` 
     """
     reply_markup = InlineKeyboardMarkup([
         [InlineKeyboardButton('ꜰꜱᴜʙ ᴄʜᴀɴɴᴇʟꜱ', 'fsub'), InlineKeyboardButton('ᴅʙ ᴄʜᴀɴɴᴇʟꜱ', 'db_channels')],
