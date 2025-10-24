@@ -214,6 +214,29 @@ class MongoDB:
         cutoff_date = datetime.now() - timedelta(days=days)
         await self.fsub_status.delete_many({"last_updated": {"$lt": cutoff_date}})
 
+
+
+
+    #--- Added my onlynoco ---# ∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆
+
+    # ✅ JOIN REQUEST MODE FUNCTIONS
+
+    async def set_join_request_mode(self, enabled: bool):
+        await self.user_data.update_one(
+            {"_id": "join_request_mode"},
+            {"$set": {"enabled": enabled}},
+            upsert=True
+        )
+
+    async def get_join_request_mode(self) -> bool:
+        data = await self.user_data.find_one({"_id": "join_request_mode"})
+        return data.get("enabled", False) if data else False
+
+
+#---- end ---# ∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆
+
+
+
     # ✅ REQUEST SUB COLLECTION FUNCTIONS
 
     async def add_join_request(self, user_id: int, channel_id: int, request_id: int = None):
