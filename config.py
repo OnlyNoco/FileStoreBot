@@ -39,7 +39,7 @@ ADMINS = [5296584067]
 CAPTION = ""
 # Bot Settings
 DISABLE_BTN = True
-PROTECT = True
+PROTECT = False
 
 # Messages Configuration
 MESSAGES = {
