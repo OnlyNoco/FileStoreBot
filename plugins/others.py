@@ -285,9 +285,9 @@ async def quick_remove_db(client: Client, message: Message):
 
 @Client.on_callback_query(filters.regex('^home$'))
 async def home(client: Client, query: CallbackQuery):
-    buttons = [[InlineKeyboardButton("Help", callback_data = "about"), InlineKeyboardButton("Close", callback_data = "close")]]
+    buttons = [[InlineKeyboardButton("• ᴀʙᴏᴜᴛ •", callback_data = "about"), InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data = "close")]]
     if query.from_user.id in client.admins:
-        buttons.insert(0, [InlineKeyboardButton("⛩️ ꜱᴇᴛᴛɪɴɢꜱ ⛩️", callback_data="settings")])
+        buttons.insert(0, [InlineKeyboardButton("• ꜱᴇᴛᴛɪɴɢꜱ •", callback_data="settings")])
     await query.message.edit_text(
         text=client.messages.get('START', 'No Start Message').format(
             first=query.from_user.first_name,
@@ -305,7 +305,7 @@ async def home(client: Client, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex('^about$'))
 async def about(client: Client, query: CallbackQuery):
-    buttons = [[InlineKeyboardButton("Back", callback_data = "home"), InlineKeyboardButton("Close", callback_data = "close")]]
+    buttons = [[InlineKeyboardButton("• ʙᴀᴄᴋ •", callback_data = "home"), InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data = "close")]]
     await query.message.edit_text(
         text=client.messages.get('ABOUT', 'No Start Message').format(
             owner_id=client.owner,
