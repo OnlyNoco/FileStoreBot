@@ -7,7 +7,7 @@ from pyrogram import Client
 from pyrogram.enums import ParseMode
 import sys
 from datetime import datetime
-from config import LOGGER, PORT, OWNER_ID, SHORT_URL, SHORT_API, SHORT_TUT
+from config import LOGGER, PORT, OWNER_ID, SHORT_URL, SHORT_API, SHORT_TUT, DB_URI, DB_NAME
 from helper import MongoDB
 
 version = "v1.0.0"
