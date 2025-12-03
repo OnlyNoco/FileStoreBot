@@ -21,7 +21,7 @@ API_ID = "26254064"
 API_HASH = "72541d6610ae7730e6135af9423b319c"
 WORKERS = 5
 
-DB_URI = "gg"
+DB_URI = os.environ.get("DB_URI", "mongodb+srv://teamprosperpay:AbidAbdullah199@cluster0.z93fita.mongodb.net/")
 DB_NAME = "Cluster0"
 
 FSUBS = [[-1002372552947, True, 10]] # Force Subscription Channels [channel_id, request_enabled, timer_in_minutes]
