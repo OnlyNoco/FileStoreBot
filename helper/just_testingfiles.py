@@ -11,14 +11,14 @@ from config import OWNER_ID
 OLD_URI = "YOUR_OLD_MONGO_URI_HERE"
 NEW_URI = "YOUR_NEW_MONGO_URI_HERE"
 
-OLD_DB = "old_db"
-NEW_DB = "new_db"
+OLD_DB = "Cluster0"
+NEW_DB = "YatoFileShare"
 
 # ✅ Init both DBs
 old_db = MongoDB(OLD_URI, OLD_DB)
 new_db = MongoDB(NEW_URI, NEW_DB)
 
-EDIT_EVERY = 50
+EDIT_EVERY = 5
 SLEEP_BETWEEN = 0.03
 
 @Client.on_message(filters.command("transfer") & filters.user(OWNER_ID))
