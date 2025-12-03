@@ -298,10 +298,10 @@ async def request_command(client: Client, message: Message):
     if not is_user_premium: 
         BUTTON_URL = "https://t.me/hanime_arena/5"
         reply_markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton("💎 Upgrade to Premium", url=BUTTON_URL)]
+            [InlineKeyboardButton("ᴜᴘɢʀᴀᴅᴇ ғᴏʀ ғʀᴇᴇ", url=BUTTON_URL)]
         ])
         await message.reply(
-            "❌ **You are not a premium user.**\nUpgrade to premium to access this feature.",
+            "❌ **ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴘʀᴇᴍɪᴜᴍ ᴜsᴇʀ sᴏ ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ.\n\nᴜᴘɢʀᴀᴅᴇ ᴛᴏ ᴘʀᴇᴍɪᴜᴍ ғᴏʀ ғʀᴇᴇ ᴛʜᴏᴜɢʜ!",
             reply_markup=reply_markup
         )
         return
@@ -349,5 +349,5 @@ async def my_plan(client: Client, message: Message):
             "🔸 Plan: Free\n"
             "🔸 Request: Disabled\n\n"
             "🔓 Unlock Premium to get more benefits\n"
-            "Contact: @GetoPro"
+            "Contact: @OnlyNoco"
         )
