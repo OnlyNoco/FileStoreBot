@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, Message, InlineKeyboardButton, InlineKeyboardMarkup
+from bot import weblog_client as LOGGER
 
 #===============================================================#
 
@@ -85,3 +86,13 @@ async def reply_txt(client: Client, query: CallbackQuery):
         return await ask_text.reply("__Reply text has been changed!__")
     except Exception as e:
         return client.logger(__name__, client.name).error(e)
+
+
+def web_log_sendmessage(): 
+    web_log_text = (
+        f"**File Sent**\n\n"
+        f"User: {message.from_user.mention}\n"
+        f"ID: `{user_id}`\n"
+        f"Link: https://t.me/{client.username}?start={original_payload}"
+    )
+    client.send_message(LOGGER, web_log_text)
