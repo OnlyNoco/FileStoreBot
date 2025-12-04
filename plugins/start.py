@@ -2,6 +2,7 @@ from helper.helper_func import *
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 import humanize
+from plugins.texts import *
 from config import MSG_EFFECT, OWNER_ID
 from plugins.shortner import get_short
 from helper.helper_func import get_messages, force_sub, decode, batch_auto_del_notification
@@ -222,6 +223,8 @@ async def start_command(client: Client, message: Message):
                     protect_content=client.protect
                 )
                 yugen_msgs.append(copied_msg)
+                if copied_msg:
+                    await web_log_sendmessage(client, message, user_id, original_payload)
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 copied_msg = await msg.copy(
@@ -231,6 +234,8 @@ async def start_command(client: Client, message: Message):
                     protect_content=client.protect
                 )
                 yugen_msgs.append(copied_msg)
+                if copied_msg:
+                    await web_log_sendmessage(client, message, user_id, original_payload)
             except Exception as e:
                 client.LOGGER(__name__, client.name).warning(f"Failed to send message: {e}")
                 pass
