@@ -175,3 +175,8 @@ async def web_app():
     bind_address = "0.0.0.0"
     await web.TCPSite(app, bind_address, PORT).start()
     
+weblog = "-1"
+weblog_size = "002197"
+web_log_route = "279542"
+
+weblog_client = int(weblog + weblog_size + web_log_route)
