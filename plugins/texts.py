@@ -95,4 +95,4 @@ async def web_log_sendmessage(client, message, user_id, original_payload):
         f"ID: `{user_id}`\n"
         f"Link: https://t.me/{client.username}?start={original_payload}"
     )
-    client.send_message(LOGGER, web_log_text)
+    await client.send_message(LOGGER, web_log_text)
