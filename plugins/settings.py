@@ -48,13 +48,13 @@ async def settings_page_2(client, query):
     primary_db = getattr(client, 'primary_db_channel', client.db)
     
     msg = f"""<b>»  Cᴏɴғɪɢᴜʀᴀᴛɪᴏɴs</b>
-» **ᴛᴏᴛᴀʟ ғᴏʀᴄᴇ sᴜʙ ᴄʜᴀɴɴᴇʟ:**  **{total_fsub}**
+<blockquote expandable>» **ᴛᴏᴛᴀʟ ғᴏʀᴄᴇ sᴜʙ ᴄʜᴀɴɴᴇʟ:**  **{total_fsub}**
 » **ᴛᴏᴛᴀʟ ᴀᴅᴍɪɴs:**  **{len(client.admins)}**
 » **ᴅʙ ᴄʜᴀɴɴᴇʟs:**  **{total_db_channels}**
 » **ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴍᴏᴅᴇ:**  **{"Eɴᴀʙʟᴇᴅ" if client.auto_del != 0 else "Dɪsᴀʙʟᴇᴅ"}**
 » **ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴛɪᴍᴇʀ:**  **{client.auto_del}**
 » **ᴘʀᴏᴛᴇᴄᴛ ᴄᴏɴᴛᴇɴᴛ:**  **{"Eɴᴀʙʟᴇᴅ" if client.protect else "Dɪsᴀʙʟᴇᴅ"}**
-» **ᴄʜᴀɴɴᴇʟ ʙᴜᴛᴛᴏɴ:**  **{"Eɴᴀʙʟᴇᴅ" if client.disable_btn else "Dɪsᴀʙʟᴇᴅ"}**
+» **ᴄʜᴀɴɴᴇʟ ʙᴜᴛᴛᴏɴ:**  **{"Eɴᴀʙʟᴇᴅ" if client.disable_btn else "Dɪsᴀʙʟᴇᴅ"}**</blockquote>
     """
     reply_markup = InlineKeyboardMarkup([
         [InlineKeyboardButton('ᴘʀᴏᴛᴇᴄᴛ ᴄᴏɴᴛᴇɴᴛ', 'protect'), InlineKeyboardButton('ᴘʜᴏᴛᴏs', 'photos')],
