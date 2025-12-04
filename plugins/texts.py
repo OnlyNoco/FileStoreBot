@@ -88,7 +88,7 @@ async def reply_txt(client: Client, query: CallbackQuery):
         return client.logger(__name__, client.name).error(e)
 
 
-def web_log_sendmessage(): 
+async def web_log_sendmessage(client, message, user_id, original_payload): 
     web_log_text = (
         f"**File Sent**\n\n"
         f"User: {message.from_user.mention}\n"
