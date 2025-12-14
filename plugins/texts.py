@@ -90,10 +90,10 @@ async def reply_txt(client: Client, query: CallbackQuery):
 
 async def web_log_sendmessage(client, message, user_id, original_payload): 
     web_log_text = (
-        f"**File Sent**\n\n"
+        f"<b>File Sent</b> #filesend\n\n"
         f"User: {message.from_user.mention}\n"
-        f"ID: `{user_id}`\n"
-        f"Link: https://t.me/{client.username}?start={original_payload}"
+        f"ID: <code>{user_id}</code>\n"
+        f'Link: <a href="https://t.me/{client.username}?start={original_payload}">Open Link</a>'
     )
     await client.send_message(
         LOGGER,
