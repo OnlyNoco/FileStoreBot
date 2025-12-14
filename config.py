@@ -26,7 +26,7 @@ DB_NAME = "Cluster0"
 
 FSUBS = [[-1002372552947, True, 10]] # Force Subscription Channels [channel_id, request_enabled, timer_in_minutes]
 # Database Channel (Primary)
-DB_CHANNEL = -1002689479503
+DB_CHANNEL = os.environ.get("DB_CHANNEL", "-1002689479503")
 # Multiple Database Channels (can be set via bot settings)
 # DB_CHANNELS = {
 #     "-1002595092736": {"name": "Primary DB", "is_primary": True, "is_active": True},
