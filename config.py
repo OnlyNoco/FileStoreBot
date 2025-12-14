@@ -43,9 +43,9 @@ PROTECT = False
 
 # Messages Configuration
 MESSAGES = {
-    "START": "<b>›› ʜᴇʏ {first} ~<blockquote>ɪ'ᴍ ʏᴀᴛᴏ, ᴏᴡɴᴇᴅ ʙʏ <a href='https://t.me/OnlyNoco'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>. ɪ ʜᴇʟᴘ ʏᴏᴜ ꜰɪɴᴅ ᴀɴɪᴍᴇ & ʜᴇɴᴛᴀɪ ᴄᴏɴᴛᴇɴᴛ ꜰᴀsᴛ ᴀɴᴅ ᴇᴀsɪʟʏ.</blockquote></b>",
+    "START": "<b>›› ʜᴇʏ {first} ~<blockquote>, ᴏᴡɴᴇᴅ ʙʏ <a href='https://t.me/OnlyNoco'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>. ɪ ʜᴇʟᴘ ʏᴏᴜ ꜰɪɴᴅ ᴀɴɪᴍᴇ & ʜᴇɴᴛᴀɪ ᴄᴏɴᴛᴇɴᴛ ꜰᴀsᴛ ᴀɴᴅ ᴇᴀsɪʟʏ.</blockquote></b>",
     "FSUB": "<b><blockquote>›› ʜᴇʏ ×</blockquote>ʏᴏᴜʀ ꜰɪʟᴇ ɪs ʀᴇᴀᴅʏ, ʙᴜᴛ ʏᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴊᴏɪɴᴇᴅ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ʏᴇᴛ. ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ᴜsɪʙɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴs ᴛᴏ ɢᴇᴛ ғɪʟᴇ ᴀᴄᴄᴇss.</b>",
-    "ABOUT": "<b>›› ᴀʙᴏᴜᴛ ᴍᴇ:<blockquote expandable>◧ ᴏᴡɴᴇʀ: <a href='https://t.me/OnlyNoco'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>\n◧ ᴏᴜʀ sᴇʀᴠɪᴄᴇs ~\n⊡ <a href='https://t.me/HeavenlySubs'>ʙᴀᴛᴛʟᴇ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ʜᴇᴀᴠᴇɴs</a>\n⊡ <a href='https://t.me/FinishedAnimeCrisp'>ꜰɪɴɪsʜᴇᴅ ᴀɴɪᴍᴇ</a>\n⊡ <a href='https://t.me/OngoingAnimeCrisp'>ᴏɴɢᴏɪɴɢ ᴀɴɪᴍᴇ</a>\n⊡ <a href='https://t.me/CrispIndex'>ᴀɴɪᴍᴇ ɪɴᴅᴇx</a>\n⊡ <a href='https://t.me/+O7PeEMZOAoMzYzVl'>ʜᴇɴᴛᴀɪ ᴄʀɪsᴘ</a>\n⊡ <a href='https://t.me/DisscusionAnimeCrisp'>ᴅɪsᴄᴜssɪᴏɴ ɢʀᴏᴜᴘ</a>\n\n♧ ᴊᴏɪɴ ᴜs ꜰᴏʀ ᴏʀɢᴀɴɪᴢᴇᴅ ᴍᴜʟᴛɪ ǫᴜᴀʟɪᴛʏ ᴀɴɪᴍᴇ ᴄᴏɴᴛᴇɴᴛ ♧</blockquote></b>",
+    "ABOUT": "<b>›› ᴀʙᴏᴜᴛ ᴍᴇ:<blockquote expandable>◧ ᴏᴡɴᴇʀ: <a href='https://t.me/OnlyNoco'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>\n◧ ᴏᴜʀ sᴇʀᴠɪᴄᴇs ~\n⊡ <a href='https://t.me/HeavenlySubs'>ʙᴀᴛᴛʟᴇ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ʜᴇᴀᴠᴇɴs</a>\n⊡ <a href='https://t.me/FinishedAnimeCrisp'>ꜰɪɴɪsʜᴇᴅ ᴀɴɪᴍᴇ</a>\n⊡ <a href='https://t.me/CrispIndex'>ᴀɴɪᴍᴇ ɪɴᴅᴇx</a>\n⊡ <a href='https://t.me/+O7PeEMZOAoMzYzVl'>ʜᴇɴᴛᴀɪ ᴄʀɪsᴘ</a>\n⊡ <a href='https://t.me/DisscusionAnimeCrisp'>ᴅɪsᴄᴜssɪᴏɴ ɢʀᴏᴜᴘ</a>\n\n♧ ᴊᴏɪɴ ᴜs ꜰᴏʀ ᴏʀɢᴀɴɪᴢᴇᴅ ᴍᴜʟᴛɪ ǫᴜᴀʟɪᴛʏ ᴀɴɪᴍᴇ ᴄᴏɴᴛᴇɴᴛ ♧</blockquote></b>",
     "REPLY": "<b>›› ᴊᴏɪɴ ᴜs ꜰᴏʀ ᴍᴏʀᴇ - <a href='https://t.me/FinishedAnimeCrisp'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠɪsɪᴛ</a></b>",
     "SHORT_MSG": "<b>📊 ʜᴇʏ {first},\n\n‼️ ɢᴇᴛ ᴀʟʟ ꜰɪʟᴇs ɪɴ ᴀ sɪɴɢʟᴇ ʟɪɴᴋ ‼️\n\n⌯ ʏᴏᴜʀ ʟɪɴᴋ ɪs ʀᴇᴀᴅʏ — ᴛᴀᴘ ᴏɴ ‘ᴏᴘᴇɴ ʟɪɴᴋ’ ᴛᴏ ᴠɪᴇᴡ.</b>",
     "START_PHOTO": "https://graph.org/file/510affa3d4b6c911c12e3.jpg",
