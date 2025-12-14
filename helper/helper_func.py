@@ -385,7 +385,7 @@ def force_sub(func):
         from_link = message.text.split(" ")
         if len(from_link) > 1:
             try_again_link = f"https://t.me/{client.username}/?start={from_link[1]}"
-            buttons.append(InlineKeyboardButton("🔄 Try Again", url=try_again_link))
+            buttons.append(InlineKeyboardButton("• ᴛʀʏ ᴀɢᴀɪɴ •", url=try_again_link))
 
         # Organize buttons in rows of 1 for better readability
         buttons_markup = InlineKeyboardMarkup([[button] for button in buttons])
