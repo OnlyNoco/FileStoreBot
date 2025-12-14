@@ -323,7 +323,7 @@ def force_sub(func):
 
         # User is not subscribed to all channels
         buttons = []
-        channels_message = f"{client.messages.get('FSUB', '')}\n\n<b>ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪᴘᴛɪᴏɴ sᴛᴀᴛᴜs:</b>\n\n"
+        channels_message = f"{client.messages.get('FSUB', '')}"
 
         c = 0
         for channel_id, (channel_name, channel_link, request, timer) in client.fsub_dict.items():
@@ -344,7 +344,7 @@ def force_sub(func):
             else:
                 status_text = "Nᴏᴛ Jᴏɪɴᴇᴅ ❌"
             
-            channels_message += f"{c}. <code>{channel_name}</code> - <b>{status_text}</b>\n"
+            #channels_message += f"{c}. <code>{channel_name}</code> - <b>{status_text}</b>\n"
 
             # Generate invite link if needed
             if timer > 0:
