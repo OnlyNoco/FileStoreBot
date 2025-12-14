@@ -162,7 +162,7 @@ async def start_command(client: Client, message: Message):
             return await message.reply("⚠️ Invalid or expired link.")
 
         # 7. Get messages from the specific source channel first
-        temp_msg = await message.reply("Wait A Sec..")
+        temp_msg = await message.reply("ᴡᴀɪᴛ ᴀ sᴇᴄ...")
         messages = []
 
         try:
