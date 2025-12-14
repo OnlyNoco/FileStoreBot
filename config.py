@@ -48,8 +48,8 @@ MESSAGES = {
     "ABOUT": "<b>›› ᴀʙᴏᴜᴛ ᴍᴇ:<blockquote expandable>◧ ᴏᴡɴᴇʀ: <a href='https://t.me/OnlyNoco'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>\n◧ ᴏᴜʀ sᴇʀᴠɪᴄᴇs ~\n⊡ <a href='https://t.me/HeavenlySubs'>ʙᴀᴛᴛʟᴇ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ʜᴇᴀᴠᴇɴs</a>\n⊡ <a href='https://t.me/FinishedAnimeCrisp'>ꜰɪɴɪsʜᴇᴅ ᴀɴɪᴍᴇ</a>\n⊡ <a href='https://t.me/CrispIndex'>ᴀɴɪᴍᴇ ɪɴᴅᴇx</a>\n⊡ <a href='https://t.me/+O7PeEMZOAoMzYzVl'>ʜᴇɴᴛᴀɪ ᴄʀɪsᴘ</a>\n⊡ <a href='https://t.me/DisscusionAnimeCrisp'>ᴅɪsᴄᴜssɪᴏɴ ɢʀᴏᴜᴘ</a>\n\n♧ ᴊᴏɪɴ ᴜs ꜰᴏʀ ᴏʀɢᴀɴɪᴢᴇᴅ ᴍᴜʟᴛɪ ǫᴜᴀʟɪᴛʏ ᴀɴɪᴍᴇ ᴄᴏɴᴛᴇɴᴛ ♧</blockquote></b>",
     "REPLY": "<b>›› ᴊᴏɪɴ ᴜs ꜰᴏʀ ᴍᴏʀᴇ - <a href='https://t.me/FinishedAnimeCrisp'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠɪsɪᴛ</a></b>",
     "SHORT_MSG": "<b>📊 ʜᴇʏ {first},\n\n‼️ ɢᴇᴛ ᴀʟʟ ꜰɪʟᴇs ɪɴ ᴀ sɪɴɢʟᴇ ʟɪɴᴋ ‼️\n\n⌯ ʏᴏᴜʀ ʟɪɴᴋ ɪs ʀᴇᴀᴅʏ — ᴛᴀᴘ ᴏɴ ‘ᴏᴘᴇɴ ʟɪɴᴋ’ ᴛᴏ ᴠɪᴇᴡ.</b>",
-    "START_PHOTO": "https://graph.org/file/510affa3d4b6c911c12e3.jpg",
-    "FSUB_PHOTO": "https://telegra.ph/file/7a16ef7abae23bd238c82-b8fbdcb05422d71974.jpg",
+    "START_PHOTO": "https://envs.sh/FVk.jpg",
+    "FSUB_PHOTO": "https://envs.sh/-Dw.jpg",
     "SHORT_PIC": "https://telegra.ph/file/7a16ef7abae23bd238c82-b8fbdcb05422d71974.jpg",
     "SHORT": "https://telegra.ph/file/8aaf4df8c138c6685dcee-05d3b183d4978ec347.jpg"
 }
