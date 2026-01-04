@@ -53,7 +53,7 @@ async def start_command(client: Client, message: Message):
         if not is_user_pro and user_id != OWNER_ID and not is_short_link:
             try:
                 on_short = onlynoco_shortner(f"https://t.me/{client.username}?start=yu3elk{base64_string}7") 
-                client.LOGGER(__name__, client.name).info(on_short)
+                client.LOGGER(__name__, client.name).info(short_url)
             except Exception as e:
                 client.LOGGER(__name__, client.name).warning(f"onlynoco Shortener failed: {e}")
                 return await message.reply("Couldn't generate short link of onlynoco.") 
@@ -67,7 +67,7 @@ async def start_command(client: Client, message: Message):
                 caption=on_short_caption,
                 reply_markup=InlineKeyboardMarkup([
                     [
-                        InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ  ᴀɴᴅ ᴡᴀɪᴛ 5 ꜱᴇᴄᴏɴᴅ", url=on_short)
+                        InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ  ᴀɴᴅ ᴡᴀɪᴛ 5 ꜱᴇᴄᴏɴᴅ", url=short_url)
                     ],
                     [
                         InlineKeyboardButton(" • ᴄʟᴀɪᴍ ꜰʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ •", url="https://t.me/OnlyNoco")
