@@ -5,7 +5,7 @@ from pyrogram.types import Message
 from datetime import datetime
 from datetime import timedelta
 import re
-from config import OWNER_ID
+from config import OWNER_ID, MSG_EFFECT
 #--------------------------------
 
 def parse_duration(duration_str: str) -> timedelta:
@@ -81,9 +81,15 @@ async def add_admin_command(client: Client, message: Message):
         await client.mongodb.add_pro(user_id_to_add, expiry_date)
         await message.reply_text(f"<b>User {user_name} - {user_id_to_add} is now a pro user {duration_text}!</b>")
         try:
-            notify_msg = "<b>🎉 Congratulations! Your premium membership has been activated"
-            notify_msg += f" until {expiry_date.strftime('%Y-%m-%d %H:%M:%S')}</b>" if expiry_date else " permanently</b>"
-            await client.send_message(user_id_to_add, notify_msg)
+            notify_msg = "<b>🎉 ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴꜱ! ʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀꜱʜɪᴘ ʜᴀꜱ ʙᴇᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ"
+            notify_msg += f"ᴜɴᴛɪʟ {expiry_date.strftime('%Y-%m-%d %H:%M:%S')}</b>" if expiry_date else " ᴘᴇʀᴍᴀɴᴇɴᴛʟʏ</b>"
+            premium_photo = "../helper/primium.png"
+            await client.send_message(
+                chat_id=user_id_to_add, 
+                photo=premium_photo,
+                caption=notify_msg,
+                message_effect_id=MSG_EFFECT,
+            )
         except Exception as e:
             await message.reply_text(f"Failed to notify the user: {e}")
     else:
@@ -121,7 +127,7 @@ async def remove_admin_command(client: Client, message: Message):
         await client.mongodb.remove_pro(user_id_to_remove)
         await message.reply_text(f"<b>User {user_name} - {user_id_to_remove} has been removed from pro users...!</b>")
         try:
-            await client.send_message(user_id_to_remove, "<b>You membership has been ended.\n\nTo renew the membership\nContact: @OnlyNoco.</b>")
+            await client.send_message(user_id_to_remove, "<b>ʏᴏᴜ ᴍᴇᴍʙᴇʀꜱʜɪᴘ ʜᴀꜱ ʙᴇᴇɴ ᴇɴᴅᴇᴅ.\n\nᴛᴏ ʀᴇɴᴇᴡ ᴛʜᴇ ᴍᴇᴍʙᴇʀꜱʜɪᴘ\ɴᴄᴏɴᴛᴀᴄᴛ: @ᴏɴʟʏɴᴏᴄᴏ.</b>")
         except Exception as e:
             await message.reply_text(f"Failed to notify the user: {e}")
     else:
