@@ -53,6 +53,7 @@ async def start_command(client: Client, message: Message):
         if not is_user_pro and user_id != OWNER_ID and not is_short_link:
             try:
                 on_short = onlynoco_shortner(f"https://t.me/{client.username}?start=yu3elk{base64_string}7") 
+                client.LOGGER(__name__, client.name).info(on_short)
             except Exception as e:
                 client.LOGGER(__name__, client.name).warning(f"onlynoco Shortener failed: {e}")
                 return await message.reply("Couldn't generate short link of onlynoco.") 
