@@ -5,7 +5,6 @@ import humanize
 from plugins.texts import *
 from config import MSG_EFFECT, OWNER_ID
 from plugins.shortner import get_short
-from plugins.onlynocoshortner import onlynoco_shortner
 from helper.helper_func import get_messages, force_sub, decode, batch_auto_del_notification
 import asyncio
 
@@ -48,34 +47,6 @@ async def start_command(client: Client, message: Message):
         
         # 4. Check if shortner is enabled
         shortner_enabled = getattr(client, 'shortner_enabled', True) 
-
-        # only noco shorter 
-        if not is_user_pro and user_id != OWNER_ID and not is_short_link:
-            try:
-                on_short = onlynoco_shortner(f"https://t.me/{client.username}?start=yu3elk{base64_string}7") 
-            except Exception as e:
-                client.LOGGER(__name__, client.name).warning(f"onlynoco Shortener failed: {e}")
-                return await message.reply("Couldn't generate short link of onlynoco.") 
-
-            on_short_photo = client.messages.get("ON_SHORT_PIC", "")
-            on_short_caption = client.messages.get("ON_SHORT_MSG", "")
-
-            await client.send_photo(
-                chat_id=message.chat.id,
-                photo=on_short_photo,
-                caption=on_short_caption,
-                reply_markup=InlineKeyboardMarkup([
-                    [
-                        InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ  ᴀɴᴅ ᴡᴀɪᴛ 5 ꜱᴇᴄᴏɴᴅ", url=on_short)
-                    ],
-                    [
-                        InlineKeyboardButton(" • ᴄʟᴀɪᴍ ꜰʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ •", url="https://t.me/OnlyNoco")
-                    ]
-                ])
-            )
-            return  # prevent sending actual files
-        
-        
 
         # 5. If user is not premium AND shortner is enabled, send short URL and return
         if not is_user_pro and user_id != OWNER_ID and not is_short_link and shortner_enabled:
