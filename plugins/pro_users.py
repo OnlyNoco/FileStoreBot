@@ -82,7 +82,8 @@ async def add_admin_command(client: Client, message: Message):
         await message.reply_text(f"<b>User {user_name} - {user_id_to_add} is now a pro user {duration_text}!</b>")
         try:
             notify_msg = "<b>🎉 ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴꜱ! ʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀꜱʜɪᴘ ʜᴀꜱ ʙᴇᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ"
-            notify_msg += f"ᴜɴᴛɪʟ {expiry_date.strftime('%Y-%m-%d %H:%M:%S')}</b>" if expiry_date else " ᴘᴇʀᴍᴀɴᴇɴᴛʟʏ</b>"
+            notify_msg += f" ᴜɴᴛɪʟ {expiry_date.strftime('%Y-%m-%d %H:%M:%S')}</b>" if expiry_date else " ᴘᴇʀᴍᴀɴᴇɴᴛʟʏ</b>"
+            notify_msg += "- ɴᴏ ᴜʀʟ ꜱʜᴏʀᴛɴᴇʀ /n- ɴᴏ ɪɴᴛᴇʀʀᴜᴘᴛɪᴏɴ /n- ꜰᴜʟʟ ᴀᴅᴍɪɴ ꜱᴜᴘᴘᴏʀᴛ  /n- ᴍᴏᴅꜱ ʟɪᴋᴇ ᴛʀᴇᴀᴛᴍᴇɴᴛ ᴏɴ ᴛʜᴇ ᴄʜᴀᴛ/n/n~ ᴅᴍ @onlynoco ᴡʜᴇɴᴇᴠᴇʀ ʏᴏᴜ ᴡᴀɴᴛ!"
             premium_photo = "https://raw.githubusercontent.com/OnlyNoco/FileStoreBot/refs/heads/master/plugins/photo.png"
             await client.send_photo(
                 chat_id=user_id_to_add, 
