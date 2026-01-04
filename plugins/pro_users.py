@@ -84,7 +84,7 @@ async def add_admin_command(client: Client, message: Message):
             notify_msg = "<b>🎉 ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴꜱ! ʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀꜱʜɪᴘ ʜᴀꜱ ʙᴇᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ"
             notify_msg += f"ᴜɴᴛɪʟ {expiry_date.strftime('%Y-%m-%d %H:%M:%S')}</b>" if expiry_date else " ᴘᴇʀᴍᴀɴᴇɴᴛʟʏ</b>"
             premium_photo = "../helper/primium.png"
-            await client.send_message(
+            await client.send_photo(
                 chat_id=user_id_to_add, 
                 photo=premium_photo,
                 caption=notify_msg,
@@ -127,7 +127,7 @@ async def remove_admin_command(client: Client, message: Message):
         await client.mongodb.remove_pro(user_id_to_remove)
         await message.reply_text(f"<b>User {user_name} - {user_id_to_remove} has been removed from pro users...!</b>")
         try:
-            await client.send_message(user_id_to_remove, "<b>ʏᴏᴜ ᴍᴇᴍʙᴇʀꜱʜɪᴘ ʜᴀꜱ ʙᴇᴇɴ ᴇɴᴅᴇᴅ.\n\nᴛᴏ ʀᴇɴᴇᴡ ᴛʜᴇ ᴍᴇᴍʙᴇʀꜱʜɪᴘ\ɴᴄᴏɴᴛᴀᴄᴛ: @ᴏɴʟʏɴᴏᴄᴏ.</b>")
+            await client.send_message(user_id_to_remove, "<b>ʏᴏᴜʀ ᴍᴇᴍʙᴇʀꜱʜɪᴘ ʜᴀꜱ ʙᴇᴇɴ ᴇɴᴅᴇᴅ.\n\nᴛᴏ ʀᴇɴᴇᴡ ᴛʜᴇ ᴍᴇᴍʙᴇʀꜱʜɪᴘ\nᴄᴏɴᴛᴀᴄᴛ: @onlynoco.</b>")
         except Exception as e:
             await message.reply_text(f"Failed to notify the user: {e}")
     else:
