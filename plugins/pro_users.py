@@ -81,13 +81,18 @@ async def add_admin_command(client: Client, message: Message):
         await client.mongodb.add_pro(user_id_to_add, expiry_date)
         await message.reply_text(f"<b>User {user_name} - {user_id_to_add} is now a pro user {duration_text}!</b>")
         try:
-            notify_msg = "<b>🎉 ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴꜱ! ʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀꜱʜɪᴘ ʜᴀꜱ ʙᴇᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ"
-            notify_msg += f" ᴜɴᴛɪʟ {expiry_date.strftime('%Y-%m-%d %H:%M:%S')}</b>" if expiry_date else " ᴘᴇʀᴍᴀɴᴇɴᴛʟʏ</b>"
-            notify_msg += f"- ɴᴏ ᴜʀʟ ꜱʜᴏʀᴛɴᴇʀ"
-            notify_msg += f"- ɴᴏ ɪɴᴛᴇʀʀᴜᴘᴛɪᴏɴ"
-            notify_msg += f"- ꜰᴜʟʟ ᴀᴅᴍɪɴ ꜱᴜᴘᴘᴏʀᴛ"
-            notify_msg += f"- ᴍᴏᴅꜱ ʟɪᴋᴇ ᴛʀᴇᴀᴛᴍᴇɴᴛ ᴏɴ ᴛʜᴇ ᴄʜᴀᴛ"
-            notify_msg += f"~ ᴅᴍ @onlynoco ᴡʜᴇɴᴇᴠᴇʀ ʏᴏᴜ ᴡᴀɴᴛ!"
+            notify_msg = "<b>🎉 ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴꜱ!\nʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀꜱʜɪᴘ ʜᴀꜱ ʙᴇᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ"
+
+            notify_msg += (
+                f"\nᴜɴᴛɪʟ {expiry_date.strftime('%Y-%m-%d %H:%M:%S')}</b>\n\n"
+                if expiry_date else "\nᴘᴇʀᴍᴀɴᴇɴᴛʟʏ</b>\n\n"
+            )
+
+            notify_msg += "- ɴᴏ ᴜʀʟ ꜱʜᴏʀᴛɴᴇʀ\n"
+            notify_msg += "- ɴᴏ ɪɴᴛᴇʀʀᴜᴘᴛɪᴏɴ\n"
+            notify_msg += "- ꜰᴜʟʟ ᴀᴅᴍɪɴ ꜱᴜᴘᴘᴏʀᴛ\n"
+            notify_msg += "- ᴍᴏᴅꜱ ʟɪᴋᴇ ᴛʀᴇᴀᴛᴍᴇɴᴛ ᴏɴ ᴛʜᴇ ᴄʜᴀᴛ\n\n"
+            notify_msg += "~ ᴅᴍ @onlynoco ᴡʜᴇɴᴇᴠᴇʀ ʏᴏᴜ ᴡᴀɴᴛ!"
             premium_photo = "https://raw.githubusercontent.com/OnlyNoco/FileStoreBot/refs/heads/master/plugins/photo.png"
             await client.send_photo(
                 chat_id=user_id_to_add, 
