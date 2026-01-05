@@ -22,7 +22,7 @@ API_HASH = "72541d6610ae7730e6135af9423b319c"
 WORKERS = 5 
 
 DB_URI = os.environ.get("DB_URI", "ITS USING CONFIG DB ")
-DB_NAME = "Cluster0"
+DB_NAME = os.environ.get("DB_NAME", "Cluster0")
 
 FSUBS = [[-1002372552947, True, 10]] # Force Subscription Channels [channel_id, request_enabled, timer_in_minutes]
 # Database Channel (Primary)
