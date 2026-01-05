@@ -84,7 +84,7 @@ async def add_admin_command(client: Client, message: Message):
             notify_msg = "<b>🎉 ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴꜱ!\nʏᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀꜱʜɪᴘ ʜᴀꜱ ʙᴇᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ"
 
             notify_msg += (
-                f"\nᴜɴᴛɪʟ {expiry_date.strftime('%Y-%m-%d %H:%M:%S')}</b>\n\n"
+                f" ᴜɴᴛɪʟ {expiry_date.strftime('%Y-%m-%d %H:%M:%S')}</b>\n\n"
                 if expiry_date else "\nᴘᴇʀᴍᴀɴᴇɴᴛʟʏ</b>\n\n"
             )
 
