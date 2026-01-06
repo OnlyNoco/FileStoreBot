@@ -68,9 +68,6 @@ async def start_command(client: Client, message: Message):
                 reply_markup=InlineKeyboardMarkup([
                     [
                         InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ  ᴀɴᴅ ᴡᴀɪᴛ 5 ꜱᴇᴄᴏɴᴅ", url=short_url)
-                    ],
-                    [
-                        InlineKeyboardButton(" • ᴄʟᴀɪᴍ ꜰʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ •", url="https://t.me/OnlyNoco")
                     ]
                 ])
             )
