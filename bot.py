@@ -33,6 +33,7 @@ class Bot(Client):
         self.fsub_dict = {}
         self.admins = admins + [OWNER_ID] if OWNER_ID not in admins else admins
         self.messages = messages
+        self.onlynoco_shortner = False
         self.auto_del = auto_del
         self.protect = protect
         self.req_fsub = {}
