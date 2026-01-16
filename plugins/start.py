@@ -49,22 +49,23 @@ async def start_command(client: Client, message: Message):
         # 4. Check if shortner is enabled
         shortner_enabled = getattr(client, 'shortner_enabled', True) 
 
-        # only noco shorter 
-        if not is_user_pro and user_id != OWNER_ID and not is_short_link:
-            try:
-                short_url = onlynoco_shortner(f"https://t.me/{client.username}?start=yu3elk{base64_string}7") 
-                client.LOGGER(__name__, client.name).info(short_url)
-            except Exception as e:
-                client.LOGGER(__name__, client.name).warning(f"onlynoco Shortener failed: {e}")
-                return await message.reply("Couldn't generate short link of onlynoco.") 
+        # only noco shorter
+        if client.onlynoco_shortner:
+            if not is_user_pro and user_id != OWNER_ID and not is_short_link:
+                try:
+                    short_url = onlynoco_shortner(f"https://t.me/{client.username}?start=yu3elk{base64_string}7") 
+                    client.LOGGER(__name__, client.name).info(short_url)
+                except Exception as e:
+                    client.LOGGER(__name__, client.name).warning(f"onlynoco Shortener failed: {e}")
+                    return await message.reply("Couldn't generate short link of onlynoco.") 
 
-            on_short_photo = client.messages.get("ON_SHORT_PIC", "")
-            on_short_caption = client.messages.get("ON_SHORT_MSG", "")
+                on_short_photo = client.messages.get("ON_SHORT_PIC", "")
+                on_short_caption = client.messages.get("ON_SHORT_MSG", "")
 
-            await client.send_photo(
-                chat_id=message.chat.id,
-                photo=on_short_photo,
-                caption=on_short_caption,
+                await client.send_photo(
+                    chat_id=message.chat.id,
+                    photo=on_short_photo,
+                    caption=on_short_caption,
                 reply_markup=InlineKeyboardMarkup([
                     [
                         InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ  ᴀɴᴅ ᴡᴀɪᴛ 5 ꜱᴇᴄᴏɴᴅ", url=short_url)
