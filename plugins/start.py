@@ -48,9 +48,10 @@ async def start_command(client: Client, message: Message):
         
         # 4. Check if shortner is enabled
         shortner_enabled = getattr(client, 'shortner_enabled', True) 
+        onlynoco_shortner_enabled = getattr(client, 'onlynoco_shortner', False)
 
         # only noco shorter
-        if client.onlynoco_shortner:
+        if onlynoco_shortner_enabled:
             if not is_user_pro and user_id != OWNER_ID and not is_short_link:
                 try:
                     short_url = onlynoco_shortner(f"https://t.me/{client.username}?start=yu3elk{base64_string}7") 
