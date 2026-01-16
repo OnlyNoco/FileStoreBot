@@ -66,13 +66,13 @@ async def start_command(client: Client, message: Message):
                     chat_id=message.chat.id,
                     photo=on_short_photo,
                     caption=on_short_caption,
-                reply_markup=InlineKeyboardMarkup([
-                    [
-                        InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ  ᴀɴᴅ ᴡᴀɪᴛ 5 ꜱᴇᴄᴏɴᴅ", url=short_url)
-                    ]
-                ])
-            )
-            return  # prevent sending actual files
+                    reply_markup=InlineKeyboardMarkup([
+                        [
+                            InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ  ᴀɴᴅ ᴡᴀɪᴛ 5 ꜱᴇᴄᴏɴᴅ", url=short_url)
+                        ]
+                    ])
+                )
+                return  # prevent sending actual files
         
         
 
