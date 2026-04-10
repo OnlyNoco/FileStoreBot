@@ -169,8 +169,8 @@ class Bot(Client):
         self.LOGGER(__name__, self.name).info("Bot stopped.")
 
 
-async def web_app():
-    app = web.AppRunner(await web_server())
+async def web_app(client):
+    app = web.AppRunner(await web_server(client))
     await app.setup()
     bind_address = "0.0.0.0"
     await web.TCPSite(app, bind_address, PORT).start()

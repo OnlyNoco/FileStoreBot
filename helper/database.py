@@ -729,6 +729,63 @@ class MongoDB:
             return True
         return False
 
+    # REMOTE BOT REGISTRY FUNCTIONS
+
+    @staticmethod
+    def _normalize_remote_bot_key(bot_name: str) -> str:
+        return " ".join(bot_name.strip().lower().split())
+
+    async def set_remote_bots(self, bots_data: dict):
+        await self.user_data.update_one(
+            {"_id": "remote_bots"},
+            {"$set": {"bots": bots_data}},
+            upsert=True
+        )
+
+    async def get_remote_bots(self) -> dict:
+        data = await self.user_data.find_one({"_id": "remote_bots"})
+        return data.get("bots", {}) if data else {}
+
+    async def get_active_remote_bots(self) -> dict:
+        bots = await self.get_remote_bots()
+        return {
+            bot_key: bot_data
+            for bot_key, bot_data in bots.items()
+            if bot_data.get("is_active", True)
+        }
+
+    async def get_remote_bot(self, bot_name: str):
+        bots = await self.get_remote_bots()
+        return bots.get(self._normalize_remote_bot_key(bot_name))
+
+    async def upsert_remote_bot(self, bot_name: str, bot_data: dict):
+        bots = await self.get_remote_bots()
+        bot_key = self._normalize_remote_bot_key(bot_name)
+        bot_data["name"] = bot_name.strip()
+        bots[bot_key] = bot_data
+        await self.set_remote_bots(bots)
+        return bot_key
+
+    async def remove_remote_bot(self, bot_name: str) -> bool:
+        bots = await self.get_remote_bots()
+        removed = bots.pop(self._normalize_remote_bot_key(bot_name), None)
+        if removed is None:
+            return False
+        await self.set_remote_bots(bots)
+        return True
+
+    async def toggle_remote_bot_status(self, bot_name: str):
+        bots = await self.get_remote_bots()
+        bot_key = self._normalize_remote_bot_key(bot_name)
+        bot_data = bots.get(bot_key)
+        if not bot_data:
+            return None
+
+        bot_data["is_active"] = not bot_data.get("is_active", True)
+        bots[bot_key] = bot_data
+        await self.set_remote_bots(bots)
+        return bot_data["is_active"]
+
     # ✅ BATCH SETTINGS FUNCTIONS
 
     async def save_all_settings(self, bot_settings: dict, messages: dict, admins: list):
