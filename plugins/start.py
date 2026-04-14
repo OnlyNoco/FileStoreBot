@@ -77,32 +77,32 @@ async def start_command(client: Client, message: Message):
         
         
 
-        # 5. If user is not premium AND shortner is enabled, send short URL and return
-        if not is_user_pro and user_id != OWNER_ID and not is_short_link and shortner_enabled:
-            try:
-                short_link = get_short(f"https://t.me/{client.username}?start=yu3elk{base64_string}7", client)
-            except Exception as e:
-                client.LOGGER(__name__, client.name).warning(f"Shortener failed: {e}")
-                return await message.reply("Couldn't generate short link.")
+        # # 5. If user is not premium AND shortner is enabled, send short URL and return
+        # if not is_user_pro and user_id != OWNER_ID and not is_short_link and shortner_enabled:
+        #     try:
+        #         short_link = get_short(f"https://t.me/{client.username}?start=yu3elk{base64_string}7", client)
+        #     except Exception as e:
+        #         client.LOGGER(__name__, client.name).warning(f"Shortener failed: {e}")
+        #         return await message.reply("Couldn't generate short link.")
 
-            short_photo = client.messages.get("SHORT_PIC", "")
-            short_caption = client.messages.get("SHORT_MSG", "")
-            tutorial_link = getattr(client, 'tutorial_link', "https://t.me/How_to_Download_7x/26")
+        #     short_photo = client.messages.get("SHORT_PIC", "")
+        #     short_caption = client.messages.get("SHORT_MSG", "")
+        #     tutorial_link = getattr(client, 'tutorial_link', "https://t.me/How_to_Download_7x/26")
 
-            await client.send_photo(
-                chat_id=message.chat.id,
-                photo=short_photo,
-                caption=short_caption,
-                reply_markup=InlineKeyboardMarkup([
-                    [
-                        InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ", url=short_link)
-                    ],
-                    [
-                        InlineKeyboardButton(" • ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ •", url="https://t.me/OnlyNoco")
-                    ]
-                ])
-            )
-            return  # prevent sending actual files
+        #     await client.send_photo(
+        #         chat_id=message.chat.id,
+        #         photo=short_photo,
+        #         caption=short_caption,
+        #         reply_markup=InlineKeyboardMarkup([
+        #             [
+        #                 InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ", url=short_link)
+        #             ],
+        #             [
+        #                 InlineKeyboardButton(" • ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ •", url="https://t.me/OnlyNoco")
+        #             ]
+        #         ])
+        #     )
+        #     return  # prevent sending actual files
 
         # 6. Decode and prepare file IDs
         try:
